@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+        default-lazy-init="true">
+
+    <!--____________________________Cars______________________________-->
+
+    <bean id="alfaRomeo" class="main.Car">
+        <constructor-arg ref="wheelsSummer20HREToyo"/>
+        <constructor-arg ref="engine_2"/>
+    </bean>
+
+    <bean id="audi" class="main.Car">
+        <constructor-arg ref="wheelsWinter20ENZOHankook"/>
+        <constructor-arg ref="engine_5"/>
+    </bean>
+
+    <bean id="bmw" class="main.Car">
+        <constructor-arg ref="wheelsWinter20ENZOHankook"/>
+        <constructor-arg ref="engine_3"/>
+    </bean>
+
+    <bean id="ford" class="main.Car">
+        <constructor-arg ref="wheelsWinter20KONIGNokian"/>
+        <constructor-arg ref="engine_4"/>
+    </bean>
+
+    <bean id="shkoda" class="main.Car">
+        <constructor-arg ref="wheelsSummer20MAKRosava"/>
+        <constructor-arg ref="engine_1"/>
+    </bean>
+
+    <!--____________________________Engines______________________________-->
+
+    <bean id="engine_1" class="main.Engine">
+        <property name="power" value="300"/>
+        <property name="capacity" value="2.8"/>
+        <property name="type" value="v6"/>
+    </bean>
+    <bean id="engine_2" class="main.Engine">
+        <property name="power" value="500"/>
+        <property name="capacity" value="4.5"/>
+        <property name="type" value="v8"/>
+    </bean>
+    <bean id="engine_3" class="main.Engine">
+        <property name="power" value="150"/>
+        <property name="capacity" value="2"/>
+        <property name="type" value="rotor"/>
+    </bean>
+    <bean id="engine_4" class="main.Engine">
+        <property name="power" value="250"/>
+        <property name="capacity" value="6"/>
+        <property name="type" value="vr"/>
+    </bean>
+    <bean id="engine_5" class="main.Engine">
+        <property name="power" value="130"/>
+        <property name="capacity" value="8"/>
+        <property name="type" value="u"/>
+    </bean>
+
+
+    <!--____________________________Wheels________________________________-->
+
+    <bean id="wheels_summer_18_BBS_good_year" class="main.Wheels">
+        <constructor-arg ref="summerTyres18GoodYear"/>
+        <constructor-arg value="BBS"/>
+    </bean>
+    <bean id="wheelsWinter20ENZOHankook" class="main.Wheels">
+        <constructor-arg ref="winterTyres20Hankook"/>
+        <constructor-arg value="ENZO"/>
+    </bean>
+    <bean id="wheelsSummer20HREToyo" class="main.Wheels">
+        <constructor-arg ref="summerTyres20Toyo"/>
+        <constructor-arg value="HRE"/>
+    </bean>
+    <bean id="wheelsWinter20KONIGNokian" class="main.Wheels">
+        <constructor-arg ref="winterTyres20Nokian"/>
+        <constructor-arg value="KONIG"/>
+    </bean>
+    <bean id="wheelsSummer20MAKRosava" class="main.Wheels">
+        <constructor-arg ref="summerTyres20Rosava"/>
+        <constructor-arg value="MAK"/>
+    </bean>
+    <!--___________________________Tyres_________________________________-->
+
+    <bean id="summerTyres17GoodYear" class="main.tyres.SummerTyres">
+        <constructor-arg value="17"/>
+        <constructor-arg value="Good Year"/>
+        <constructor-arg value="215"/>
+    </bean>
+    <bean id="summerTyres18GoodYear" class="main.tyres.SummerTyres">
+        <constructor-arg value="18"/>
+        <constructor-arg value="Good Year"/>
+        <constructor-arg value="215"/>
+    </bean>
+    <bean id="summerTyres20Rosava" class="main.tyres.SummerTyres">
+        <constructor-arg value="20"/>
+        <constructor-arg value="Rosava"/>
+        <constructor-arg value="225"/>
+    </bean>
+    <bean id="summerTyres19Toyo" class="main.tyres.SummerTyres">
+        <constructor-arg value="19"/>
+        <constructor-arg value="Toyo"/>
+        <constructor-arg value="195"/>
+    </bean>
+    <bean id="summerTyres20Toyo" class="main.tyres.SummerTyres">
+        <constructor-arg value="20"/>
+        <constructor-arg value="Toyo"/>
+        <constructor-arg value="205"/>
+    </bean>
+
+    <bean id="winterTyres20Pirelli" class="main.tyres.WinterTyres">
+        <constructor-arg value="20"/>
+        <constructor-arg value="Pirelli"/>
+        <constructor-arg value="false"/>
+    </bean>
+
+    <bean id="winterTyres19Pirelli" class="main.tyres.WinterTyres">
+        <constructor-arg value="19"/>
+        <constructor-arg value="Pirelli"/>
+        <constructor-arg value="false"/>
+    </bean>
+    <bean id="winterTyres20Nokian" class="main.tyres.WinterTyres">
+        <constructor-arg value="20"/>
+        <constructor-arg value="Nokian"/>
+        <constructor-arg value="true"/>
+    </bean>
+    <bean id="winterTyres20Hankook" class="main.tyres.WinterTyres">
+        <constructor-arg value="20"/>
+        <constructor-arg value="Hankook"/>
+        <constructor-arg value="true"/>
+    </bean>
+</beans>
